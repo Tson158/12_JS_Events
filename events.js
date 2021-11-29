@@ -1,9 +1,9 @@
 
 /********  Variablen **********/
 
-// const btn = document.getElementById("trigBtn");
+const btn = document.getElementById("trigBtn");
 
-const btn = document.body.children[0];
+// const btn = document.body.children[0];
 
 
 // output(btn);
