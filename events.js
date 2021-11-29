@@ -1,7 +1,8 @@
 
 /********  Variablen **********/
 
-
+const btn = document.getElementById("trigBtn");
+output(btn);
 
 /********  Event-Listener **********/
 
@@ -13,7 +14,7 @@
 
 /********  Änderung in View-Schicht **********/
 
-/
+
 
 /* Tools */
 function output(outputData) {
