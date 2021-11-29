@@ -2,7 +2,7 @@
 /********  Variablen **********/
 
 const btn = document.getElementById("trigBtn");
-
+let appStatus = true
 // const btn = document.body.children[0];
 
 
@@ -11,21 +11,8 @@ const btn = document.getElementById("trigBtn");
 
 /********  Event-Listener **********/
 
-btn.addEventListener("click",onClick);
-btn.addEventListener("mouseenter", onRollIn);
-btn.addEventListener("mouseleave", onRollOut);
+btn.addEventListener("click",toggleAppStatus);
 
-function onClick() {
-    output("hey");
-}
-
-function onRollIn() {
-    output("1");
-}
-
-function onRollOut() {
-    output("2");
-}
 
 
 
@@ -33,9 +20,45 @@ function onRollOut() {
 
 /********  Business-Logic | Toggle **********/
 
+function toggleAppStatus() {
+    appStatus = !appStatus
+    updateView();
+}
 
 
 /********  Änderung in View-Schicht **********/
+
+
+function updateView() {
+    if (appStatus) {
+        switchClassName("night")
+        switchBtnTxt("day")
+    } else {
+        switchClassName("day")
+        switchBtnTxt("night")
+    }
+}
+
+
+
+
+
+// switchClassName("night");
+// switchClassName("day");
+
+function switchClassName(modeStr) {
+    document.body.className = modeStr
+    document.body.children[0].className = modeStr
+    document.body.children[1].className = modeStr
+}
+
+// Modul: Umschaltung BtnTxt | Test:
+// switchBtnTxt("night");
+// switchBtnTxt("day");
+function switchBtnTxt(modeStr) {
+    btn.innerHTML = modeStr;
+}
+
 
 
 
