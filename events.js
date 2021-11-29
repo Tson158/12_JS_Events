@@ -2,11 +2,16 @@
 /********  Variablen **********/
 
 const btn = document.getElementById("trigBtn");
-output(btn);
+// output(btn);
+
 
 /********  Event-Listener **********/
 
+btn.addEventListener("click",test);
 
+function test() {
+    output("hey");
+}
 
 /********  Business-Logic | Toggle **********/
 
