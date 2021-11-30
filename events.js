@@ -10,12 +10,9 @@ let appStatus = true
 
 
 /********  Event-Listener **********/
-
+// wechselschalter bei click auf den butten
 btn.addEventListener("click",toggleAppStatus);
-
-
-
-
+window.addEventListener("load",toggleAppStatus)
 
 
 /********  Business-Logic | Toggle **********/
